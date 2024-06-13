@@ -1,0 +1,25 @@
+Nome = "Banco_01.txt"
+valor_cripto = 38
+# frase = input("Digite: ")
+def cripto(nome,valor_cripto,frase):
+    discritor = open(Nome,"a")
+    New_frase = ''
+    for letra in frase:
+        New_frase += chr((ord(letra)+valor_cripto)%127)
+    discritor.write(New_frase + "\n")
+
+def cripto(nome,valor_cripto,frase):
+    discritor = open(Nome, "r")
+    New_frase = ''
+    for letra in discritor.read():
+        print(ord(letra))
+        New_frase += chr(ord(letra)+valor_cripto)
+    print(New_frase)
+
+while True: 
+  a = "Banco_01.txt"
+  b = 38
+  c = input("Digite: ")
+
+cripto(a,b)
+descript(a,b,c)
